@@ -1,0 +1,21 @@
+
+<div class="row card-container">
+    <ng-container class="col-lg-4" *ngFor="let error of errorInfos">
+      <mat-card>
+        <mat-card-title>{{error.title}}</mat-card-title>
+        <mat-card-subtitle>{{error.description}}</mat-card-subtitle>
+        <mat-card-actions>
+          <button mat-button class="md-primary">MORE DETAILS</button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+    <div>
+      <label class="bold_text">Total GUM Failed Count: {{gumCount}}</label>
+    </div>
+    <ng-container *ngFor="let guminfo of gumQueueInfo">
+      <div >
+          <label>{{guminfo.errorInfo}}</label>
+      </div>
+    </ng-container>
+</div>
+
